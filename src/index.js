@@ -14,8 +14,12 @@ app.get('/', function (req, res) {
 });
 
 const productController = require('./product/product.controller');
+const userController = require('./user/user.controller');
 
+// Products endpoint
 app.use('/products', productController);
+// Users endpoint
+app.use('/users', userController);
 
 app.listen(port, () => {
   console.log('Server is running well' + port);
